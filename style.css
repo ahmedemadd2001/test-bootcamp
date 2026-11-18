@@ -1,4 +1,4 @@
-/* General page styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -7,71 +7,41 @@ body {
 
 h1,
 h2 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
+  text-align: center;
+  color: #333;
 }
 
-p {
-  margin-top: 10px;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: lightgray;
   margin-bottom: 20px;
+  border: 2px solid black;
+  gap: 15px;
 }
 
-/* Base styling for boxes */
-.box {
+.flex-item {
   background-color: lightblue;
   padding: 20px;
-  width: 200px;
-  color: white;
-  font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
+  border: 1px solid #333;
 }
+/* flex-basis-exemple*/
 
-/* Static position (default) */
-.static-box {
-  background-color: lightcoral;
+.persentge-exemple .flex-item {
+  flex-basis: 150px;
+  flex-grow: 1;
+} 
+.dif-width  .flex-item:nth-child(1){ 
+flex-basis: 100px; 
+flex-grow: 1;
 }
-
-/* Relative position */
-.relative-box {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  background-color: lightgreen;
+.dif-width  .flex-item:nth-child(2){ 
+flex-basis: 300px;
+flex-grow: 3;
 }
-
-/* Absolute position */
-.absolute-box {
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  background-color: orange;
-}
-
-/* Fixed position */
-.fixed-box {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: darkblue;
-}
-
-/* Sticky Position */
-.sticky-box {
-  position: sticky;
-  top: 10px;
-  background-color: darkorange;
-}
-
-/* Container to demonstrate absolute positioning */
-.container {
-  position: relative;
-  height: 300px;
-  background-color: lightgray;
-  border: 2px solid black;
-  padding: 20px;
-}
-/* Add extra height for scrolling */
-.extra-space {
-  height: 2000px; /* Add extra space to enable scrolling */
+.dif-width  .flex-item:nth-child(3){ 
+flex-basis: 200px;
+flex-grow: 2;
 }
